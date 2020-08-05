@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Projeto Original
+*.idea
+*.sqlite3
+*.env
+*pyc
+.DS_Store
+env/
+.env

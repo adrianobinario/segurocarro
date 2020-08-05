@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %} Previsão {% endblock %}
+
+{% block main %}
+<h1 align="center">Calculo de probabilidade de Risco</h1>
+<h3 align="center">Preencha os Campos</h3>
+<form method="post" action="resultado">
+    {% csrf_token %}
+
+    <div class="container">
+    <div class="row">
+<!--
+    <div class="col-sm">
+
+    </div>
+-->
+    <div class="col-sm">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div>
+                    {{idade}}
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div>
+                    {{risco}}
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div>
+                    {{veiculo}}
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="div1">
+                    <button type="submit" class="btn btn-primary">Calcular</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-sm">
+        <ul class="list-group">
+            <li class="list-group-item">
+                Baixo: {{None_}}<br/>
+            </li>
+            <li class="list-group-item">
+                Leve: {{Mild}}<br/>
+            </li>
+            <li class="list-group-item">
+                Moderado: {{Moderate}}<br/>
+            </li>
+            <li class="list-group-item">
+                Alto: {{Severe}}<br/>
+            </li>
+        </ul>
+    </div>
+    </div>
+    </div>
+
+{% endblock %}
+
+{% block footer%}
+<footer class="page-footer font-small blue">
+  <div class="footer-copyright text-center py-3">© Orientador:
+    <a href="https://mdbootstrap.com/"> Baldoino Fonseca</a>
+  </div>
+</footer>
+
+{% endblock %}
